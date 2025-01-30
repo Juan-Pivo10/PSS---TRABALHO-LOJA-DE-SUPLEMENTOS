@@ -1,0 +1,45 @@
+POST http://localhost:3333/suplemento
+Content-Type: application/json
+
+{
+   "tipo": "creatina",
+   "quantidade": 30,
+   "marca": "Growth",
+   "preço": 500
+}
+
+###
+
+GET http://localhost:3333/suplemento
+
+###
+
+GET http://localhost:3333/livros?search=Growth
+
+###
+
+PUT http://localhost:3333/suplemento/
+Content-Type: application/json
+
+{
+   "tipo": "creatina",
+   "quantidade": 30,
+   "marca": "Growth",
+   "preço": 500
+}
+
+###
+
+DELETE http://localhost:3333/suplemento/
+
+###
+
+PATCH http://localhost:3333/suplemento/
+Content-Type: application/json
+
+{
+   "tipo": "Whey",
+   "quantidade": 10,
+   "marca": "Growth",
+   "preço": 100
+}
