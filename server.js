@@ -7,27 +7,30 @@ const server = fastify()
 //criando database
 const database = new DatabaseMemory()
 //lendo um suplemento
-server.get('/suplemento', (request) => {
+server.get('/suplementos', (request) => {
     //pegando a busca
     const search = request.query.search
     //imprimir busca
-    //console.log(search)
+      console.log(search)
     //Acessando o database
     const suplementos = database.list(search)
-    //console.log(suplemento)
+      //console.log(suplemento)
     //retornando suplemento
     return suplementos
 })
 //Criando um suplemento
 server.post('/suplemento', (request, reply) => {
     //acessando dados do corpo
-    const { tipo, quantidade, marca, preço } = request.body
+    const { tipo, quantidade, marca, preço, peso, proteina } = request.body
 
     database.create({
         tipo: tipo,
         quantidade: quantidade,
         marca: marca,
         preço: preço,
+        peso: peso,
+        proteina: proteina,
+
     })
 
     //retornando que foi criado
@@ -38,12 +41,14 @@ server.put('/suplemento/:id', (request, reply) => {
     //passando ID do suplemento
     const suplementoId = request.params.id
     //passando o restante dos atributos
-    const { tipo, quantidade, marca, preço } = request.body
+    const { tipo, quantidade, marca, preço, peso, proteina } = request.body
     const suplemento = database.update(suplementoId, {
         tipo,
         quantidade,
         marca,
         preço,
+        peso,
+        proteina,
     })
     //sucesso sem conteudo
     return reply.status(204).send()
@@ -60,7 +65,7 @@ server.patch('/suplemento/:id', (request, reply) => {
 
     const lvN = { ...lvEx, ...update }
 
-    database.update(livroID, lvN)
+    database.update(suplementoID, lvN)
     return reply.status(204).send()
 });
 //excluir um registro

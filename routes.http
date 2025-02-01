@@ -2,44 +2,45 @@ POST http://localhost:3333/suplemento
 Content-Type: application/json
 
 {
-   "tipo": "creatina",
-   "quantidade": 30,
-   "marca": "Growth",
-   "preço": 500
-}
-
-###
-
-GET http://localhost:3333/suplemento
-
-###
-
-GET http://localhost:3333/livros?search=Growth
-
-###
-
-PUT http://localhost:3333/suplemento/
-Content-Type: application/json
-
-{
-   "tipo": "creatina",
-   "quantidade": 30,
-   "marca": "Growth",
-   "preço": 500
-}
-
-###
-
-DELETE http://localhost:3333/suplemento/
-
-###
-
-PATCH http://localhost:3333/suplemento/
-Content-Type: application/json
-
-{
    "tipo": "Whey",
-   "quantidade": 10,
+   "quantidade": 30,
    "marca": "Growth",
-   "preço": 100
+   "preço": 500,
+   "peso": 1000,
+   "proteina": 24
+}
+
+###
+
+GET http://localhost:3333/suplementos
+
+###
+
+GET http://localhost:3333/suplementos?search=Growth
+
+###
+
+PUT http://localhost:3333/suplemento/2f26fe42-c79a-4777-887b-b849613b5ee4
+Content-Type: application/json
+
+{
+   "tipo": "Creatina",
+   "quantidade": 25,
+   "marca": "Growth",
+   "preço": 700,
+   "peso": 100,
+   "proteina": 5
+}
+
+###
+
+DELETE http://localhost:3333/suplemento/f38b0d34-6388-4986-992d-f75b2f45576c
+
+###
+
+PATCH http://localhost:3333/suplemento/2f26fe42-c79a-4777-887b-b849613b5ee4
+Content-Type: application/json
+
+{
+   "nome": "Danones e CIA"
 }
