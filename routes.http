@@ -20,7 +20,7 @@ GET http://localhost:3333/suplementos?search=Growth
 
 ###
 
-PUT http://localhost:3333/suplemento/b6d6070f-66db-4a32-af1c-072d51be0706
+PUT http://localhost:3333/suplemento/5d252630-2293-4276-ba52-12e6f8419944
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/suplemento/fdfeab57-0138-42eb-969f-65bfd0243846
+DELETE http://localhost:3333/suplemento/1b9a49eb-3a00-4eb5-9230-5adb8d204389
 
 ###
 

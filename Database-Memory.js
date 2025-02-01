@@ -19,8 +19,8 @@ export class DatabaseMemory {
     })
       // Retornando pesquisa
       .filter(suplemento => {
-        if (search) {
-          return suplemento.titulo.includes(search)
+        if(search) {
+          return suplemento.marca.includes(search)
         }
         return true
       })

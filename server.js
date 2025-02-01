@@ -11,7 +11,7 @@ server.get('/suplementos', (request) => {
     //pegando a busca
     const search = request.query.search
     //imprimir busca
-      console.log(search)
+    //console.log(search)
     //Acessando o database
     const suplementos = database.list(search)
       //console.log(suplemento)
