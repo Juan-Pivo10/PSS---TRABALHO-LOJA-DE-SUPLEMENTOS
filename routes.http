@@ -20,7 +20,7 @@ GET http://localhost:3333/suplementos?search=Growth
 
 ###
 
-PUT http://localhost:3333/suplemento/2f26fe42-c79a-4777-887b-b849613b5ee4
+PUT http://localhost:3333/suplemento/b6d6070f-66db-4a32-af1c-072d51be0706
 Content-Type: application/json
 
 {
@@ -34,11 +34,11 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/suplemento/f38b0d34-6388-4986-992d-f75b2f45576c
+DELETE http://localhost:3333/suplemento/fdfeab57-0138-42eb-969f-65bfd0243846
 
 ###
 
-PATCH http://localhost:3333/suplemento/2f26fe42-c79a-4777-887b-b849613b5ee4
+PATCH http://localhost:3333/suplemento/6d70d099-5140-4995-90e6-c2c4c8e506b6
 Content-Type: application/json
 
 {
